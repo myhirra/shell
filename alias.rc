@@ -1,0 +1,15 @@
+alias go="cd ~/projects/biz/"
+alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\   -f2"
+alias mypublicip="curl ifconfig.me"
+
+baidu() {
+  open "https://www.baidu.com/s?wd="$1
+}
+
+google() {
+  open "https://www.google.com/search?q="$1
+}
+
+github() {
+  open "https://www.github.com/search?q="$1
+}
