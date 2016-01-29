@@ -1,6 +1,9 @@
-#! /bin/bash
+#! /bin/zsh
+path=$HOME'/.bashrc';
 
-path=$HOME'/.zshrc';
+if ([ $SHELL = "/bin/zsh" ]);then
+  path=$HOME'/.zshrc';
+fi
 
 echo '\n' >> $path
 cat ./alias.rc >> $path
