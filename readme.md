@@ -4,6 +4,9 @@
 
 ##alias
 
-如果你是zsh
+  => git clone https://github.com/myhirra/shell
+  => sh alias.sh
 
-  sh alias.sh
+比如，mac下想直接google的话
+
+  => goole test
