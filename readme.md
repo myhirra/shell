@@ -4,9 +4,9 @@
 
 ##alias
 
-  => git clone https://github.com/myhirra/shell
-  => sh alias.sh
+    => git clone https://github.com/myhirra/shell
+    => sh alias.sh
 
 比如，mac下想直接google的话
 
-  => goole test
+    => goole test
