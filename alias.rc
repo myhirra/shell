@@ -1,5 +1,5 @@
 #切换到哪个目录
-alias go="cd ~/projects/biz/"
+alias go="cd ~/codes"
 
 #本地ip
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\   -f2"

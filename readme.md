@@ -11,3 +11,11 @@
 比如，mac下想直接google的话
 
     => goole test
+
+##link
+
+    => sh link.sh
+
+比如，terminal中，想直接用sublime打开directory或file
+
+    => sublime codes
