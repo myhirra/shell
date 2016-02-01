@@ -9,15 +9,42 @@ alias mypublicip="curl ifconfig.me"
 
 #百度一下
 baidu() {
-  open "https://www.baidu.com/s?wd="$1
+  for item in $*
+  do
+	if [ "$searchWord" == "" ];then
+	  searchWord="$item";
+	else
+	  searchWord="$searchWord $item"
+	fi
+  done;
+
+  open "https://www.baidu.com/s?wd="$searchWord
 }
 
 #谷歌一下
 google() {
-  open "https://www.google.com/search?q="$1
+  for item in $*
+  do
+	if [ "$searchWord" == "" ];then
+	  searchWord="$item";
+	else
+	  searchWord="$searchWord $item"
+	fi
+  done;
+
+  open "https://www.google.com/search?q="$searchWord
 }
 
 #github一下
 github() {
-  open "https://www.github.com/search?q="$1
+  for item in $*
+  do
+	if [ "$searchWord" == "" ];then
+	  searchWord="$item";
+	else
+	  searchWord="$searchWord $item"
+	fi
+  done;
+
+  open "https://www.github.com/search?q="$searchWord
 }
