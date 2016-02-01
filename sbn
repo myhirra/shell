@@ -1,0 +1,33 @@
+#!/bin/sh
+#操作类型
+# cp 复制当前work目录下所有改动 到指定目录
+# add 当前work目录下对所有新加文件执行`svn add`
+# del 当前work目录下对所有删除文件执行`svn del`
+
+#check
+type sbn >/dev/null 2>&1 || {
+    PWD=$(pwd)
+    ln -s $PWD/sbn /usr/local/bin/sbn
+    echo >&2 "Install complete! please enjoy it.";
+    exit 1;
+}
+
+#操作名
+ME=$1
+#目标路径
+PA=$2
+
+case "$ME" in
+    cp)
+        if [ ! -z PA ]; then
+            svn st | awk '{ if($2 != "." && ($1 == "M" || $1 == "A")){ if($2 == "+"){ print $3 }else{ print $2 } } }' | xargs -n1 -I {} cp -rf {} $PA{}
+            svn st | awk '{ if($1 == "D"){print $2} }' | xargs -n1 -I {} svn del $PA{}
+        fi
+    ;;
+    add)
+        svn st | awk '{ if($1 == "?"){print $2} }' | xargs svn add
+    ;;
+    del)
+        svn st | awk '{ if($1 == "!"){print $2} }' | xargs svn del
+    ;;
+esac
