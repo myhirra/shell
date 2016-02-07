@@ -7,6 +7,9 @@ alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\   -f2"
 #公网ip
 alias mypublicip="curl ifconfig.me"
 
+#查看最近文件
+alias ltr 'ls -altr'
+
 #百度一下
 baidu() {
   for item in $*
