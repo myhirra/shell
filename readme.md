@@ -19,3 +19,8 @@
 比如，terminal中，想直接用sublime打开directory或file
 
     => sublime codes
+
+##sbn
+
+    sbn add/del #批量执行svn add/del。
+    sbn cp ${path} #copy当前目录下所有改动到指定的目录。
