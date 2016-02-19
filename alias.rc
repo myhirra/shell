@@ -10,6 +10,9 @@ alias mypublicip="curl ifconfig.me"
 #查看最近文件
 alias ltr 'ls -altr'
 
+#查看天气
+curl -4 wttr.in/
+
 #百度一下
 baidu() {
   for item in $*
